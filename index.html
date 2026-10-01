@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BPR Supra - Website Perusahaan</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Icon Bootstrap -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        .navbar {
+            background-color: #b30000;
+            padding: 15px 0;
+        }
+
+        .navbar-brand {
+            color: white !important;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-link {
+            color: white !important;
+            margin-left: 15px;
+            font-weight: 500;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ffd6d6 !important;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 550px;
+            background: linear-gradient(
+                rgba(120, 0, 0, 0.75),
+                rgba(180, 0, 0, 0.75)
+            ),
+            url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=80");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-top: 15px;
+        }
+
+        .btn-merah {
+            background-color: #b30000;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-merah:hover {
+            background-color: #800000;
+            color: white;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .judul-section {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .judul-section h2 {
+            color: #b30000;
+            font-weight: bold;
+        }
+
+        .judul-section p {
+            color: #666;
+        }
+
+        /* TENTANG */
+        #tentang {
+            background-color: white;
+        }
+
+        .tentang-box {
+            padding: 30px;
+        }
+
+        /* PRODUK */
+        .produk-card {
+            background-color: white;
+            border: none;
+            border-radius: 12px;
+            padding: 30px;
+            height: 100%;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .produk-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .produk-icon {
+            font-size: 45px;
+            color: #b30000;
+            margin-bottom: 20px;
+        }
+
+        .produk-card h4 {
+            color: #b30000;
+            font-weight: bold;
+        }
+
+        /* KEUNGGULAN */
+        #keunggulan {
+            background-color: #fff0f0;
+        }
+
+        .keunggulan-box {
+            text-align: center;
+            padding: 25px;
+        }
+
+        .keunggulan-box i {
+            font-size: 40px;
+            color: #b30000;
+        }
+
+        .keunggulan-box h5 {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        /* KONTAK */
+        #kontak {
+            background-color: white;
+        }
+
+        .kontak-box {
+            background-color: #fff0f0;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .kontak-box i {
+            color: #b30000;
+            font-size: 25px;
+            margin-right: 10px;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #8b0000;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .navbar-nav .nav-link {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+
+        <a class="navbar-brand" href="#beranda">
+            BPR Bank Supra
+        </a>
+
+        <button
+            class="navbar-toggler bg-light"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuNavbar"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuNavbar">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#beranda">
+                        Beranda
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#tentang">
+                        Tentang
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#produk">
+                        Produk
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#kontak">
+                        Kontak
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+<!-- ================= BERANDA ================= -->
+
+<section id="beranda" class="hero">
+
+    <div class="container">
+
+        <h1>Selamat Datang di BPR Bank Supra</h1>
+
+        <p>
+            Solusi Keuangan Terpercaya untuk Masyarakat
+        </p>
+
+        <br>
+
+        <a href="#tentang" class="btn-merah">
+            Pelajari Selengkapnya
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= TENTANG ================= -->
+
+<section id="tentang">
+
+    <div class="container">
+
+        <div class="judul-section">
+
+            <h2>Tentang Perusahaan</h2>
+
+            <p>
+                Mengenal lebih dekat BPR Bank Supra
+            </p>
+
+        </div>
+
+        <div class="row align-items-center">
+
+            <div class="col-md-6">
+
+                <div class="tentang-box">
+
+                    <h3>BPR Supra</h3>
+
+                    <p>
+                        BPR Supra merupakan Bank Perkreditan Rakyat
+                        yang berkomitmen memberikan pelayanan keuangan
+                        terbaik kepada masyarakat.
+                    </p>
+
+                    <p>
+                        BPR Supra menyediakan berbagai layanan keuangan,
+                        khususnya dalam bidang tabungan, deposito dan
+                        kredit yang dapat membantu memenuhi kebutuhan
+                        masyarakat serta pelaku UMKM.
+                    </p>
+
+                    <p>
+                        Dengan pelayanan yang mudah, aman dan terpercaya,
+                        BPR Supra berusaha menjadi mitra keuangan yang
+                        dapat diandalkan oleh masyarakat.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6">
+
+                <div class="tentang-box">
+
+                    <h4>Visi</h4>
+
+                    <p>
+                        Menjadi lembaga keuangan yang terpercaya dan
+                        memberikan pelayanan terbaik kepada masyarakat.
+                    </p>
+
+                    <h4>Misi</h4>
+
+                    <p>
+                        Memberikan pelayanan perbankan yang mudah,
+                        aman, cepat dan profesional serta mendukung
+                        perkembangan ekonomi masyarakat.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PRODUK ================= -->
+<section id="produk">
+
+    <div class="container">
+
+        <div class="judul-section">
+
+            <h2>Produk Kami</h2>
+
+            <p>
+                Pilihan produk keuangan untuk memenuhi kebutuhan Anda
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <!-- TABUNGAN -->
+            <div class="col-md-3">
+
+                <div class="produk-card">
+
+                    <i class="bi bi-wallet2 produk-icon"></i>
+
+                    <h4>Tabungan</h4>
+
+                    <p>
+                        Simpanan dengan proses mudah dan aman
+                        untuk membantu memenuhi kebutuhan keuangan Anda.
+                    </p>
+
+                    <a href="#kontak" class="btn-merah">
+                        Informasi
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- KREDIT -->
+            <div class="col-md-3">
+
+                <div class="produk-card">
+
+                    <i class="bi bi-cash-stack produk-icon"></i>
+
+                    <h4>Kredit</h4>
+
+                    <p>
+                        Fasilitas kredit untuk membantu memenuhi
+                        kebutuhan usaha maupun kebutuhan konsumtif.
+                    </p>
+
+                    <a href="#kontak" class="btn-merah">
+                        Informasi
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- PINJAMAN -->
+            <div class="col-md-3">
+
+                <div class="produk-card">
+
+                    <i class="bi bi-bank produk-icon"></i>
+
+                    <h4>Pinjaman</h4>
+
+                    <p>
+                        Layanan pinjaman untuk membantu memenuhi
+                        kebutuhan pribadi, usaha, maupun kebutuhan
+                        lainnya dengan proses yang mudah.
+                    </p>
+
+                    <a href="#kontak" class="btn-merah">
+                        Ajukan Pinjaman
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- DEPOSITO -->
+            <div class="col-md-3">
+
+                <div class="produk-card">
+
+                    <i class="bi bi-piggy-bank produk-icon"></i>
+
+                    <h4>Deposito</h4>
+
+                    <p>
+                        Investasi simpanan berjangka dengan
+                        keuntungan yang menarik dan aman.
+                    </p>
+
+                    <a href="#kontak" class="btn-merah">
+                        Informasi
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= KEUNGGULAN ================= -->
+
+<section id="keunggulan">
+
+    <div class="container">
+
+        <div class="judul-section">
+
+            <h2>Mengapa Memilih BPR Supra?</h2>
+
+            <p>
+                Memberikan pelayanan yang mengutamakan kebutuhan nasabah
+            </p>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-4">
+
+                <div class="keunggulan-box">
+
+                    <i class="bi bi-shield-check"></i>
+
+                    <h5>Aman</h5>
+
+                    <p>
+                        Memberikan layanan perbankan dengan
+                        mengutamakan keamanan dan kenyamanan nasabah.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="keunggulan-box">
+
+                    <i class="bi bi-person-check"></i>
+
+                    <h5>Pelayanan Terbaik</h5>
+
+                    <p>
+                        Memberikan pelayanan yang ramah,
+                        profesional dan membantu kebutuhan nasabah.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="keunggulan-box">
+
+                    <i class="bi bi-lightning-charge"></i>
+
+                    <h5>Proses Mudah</h5>
+
+                    <p>
+                        Proses layanan dibuat mudah agar dapat
+                        memberikan pengalaman yang nyaman.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= KONTAK ================= -->
+
+<section id="kontak">
+
+    <div class="container">
+
+        <div class="judul-section">
+
+            <h2>Kontak Kami</h2>
+
+            <p>
+                Hubungi BPR Supra untuk mendapatkan informasi lebih lanjut
+            </p>
+
+        </div>
+
+        <div class="row justify-content-center">
+
+            <div class="col-md-8">
+
+                <div class="kontak-box">
+
+                    <p>
+                        <i class="bi bi-building"></i>
+                        <strong>BPR Supra</strong>
+                    </p>
+
+                    <p>
+                        <i class="bi bi-geo-alt"></i>
+                        Alamat: jl.Siliwangi , Kec.Cicurug
+                    </p>
+
+                    <p>
+                        <i class="bi bi-telephone"></i>
+                        Telepon:(0226)731999
+                    </p>
+
+                    <p>
+                        <i class="bi bi-envelope"></i>
+                        Email: @bprsupra.com
+                    </p>
+
+                    <p>
+                        <i class="bi bi-clock"></i>
+                        Jam Operasional: Senin - Jumat
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p class="mb-0">
+        © 2026 BPR Supra. Semua Hak Dilindungi.
+    </p>
+
+</footer>
+
+
+<!-- Bootstrap JS -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+</body>
+</html>
